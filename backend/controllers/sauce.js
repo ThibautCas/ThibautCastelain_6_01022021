@@ -11,7 +11,7 @@ exports.createSauce = (req, res, next) => {
   sauce.save().then(
     () => {
       res.status(201).json({
-        message: 'Post saved successfully!'
+        message: 'Sauce saved successfully!'
       });
     }
   ).catch(
@@ -49,7 +49,7 @@ exports.modifySauce = (req, res, next) => {
   .then(
     () => {
       res.status(200).json({
-        message: 'Thing updated successfully!'
+        message: 'Sauce updated successfully!'
       });
     }
   ).catch(
@@ -69,7 +69,7 @@ exports.deleteSauce = (req, res, next) => {
       Sauce.deleteOne({_id: req.params.id}).then(
         () => {
           res.status(200).json({
-            message: 'Deleted!'
+            message: 'Sauce Deleted!'
           });
         }
       ).catch(
